@@ -1,0 +1,117 @@
+.componentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.componentTitle {
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+
+// Code Editor
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.output {
+  border: 0.2rem solid $lightGrey;
+  height: 40rem;
+  width: 60%;
+  border-radius: 2rem;
+  padding: 4rem 10rem;
+}
+.editorContainer {
+  display: flex;
+  margin-top: 10rem;
+}
+.codeBox {
+  height: 50rem;
+  width: 80rem;
+  border-right: 1px solid white;
+  font-size: 2rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+.htmlBox {
+  background-color: #272822;
+  //   resize: horizontal;
+  margin-right: 10rem;
+  border: none;
+}
+.cssBox {
+  background-color: #272822;
+}
+.title {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: weight(bold);
+  background-color: $darkGrey;
+}
+.titleText {
+  color: white;
+  font-size: 2rem;
+}
+.copyBtnContainer {
+  height: 5rem;
+  width: 5rem;
+  background-color: $textColor;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5rem;
+  bottom: 3rem;
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.09);
+  }
+  &:active {
+    transform: scale(0.9);
+    background-color: $successColor;
+  }
+}
+.copyIcon {
+  color: $darkGrey;
+  cursor: pointer;
+}
+.CodeMirror {
+  height: 100%;
+  padding-bottom: 7rem;
+  margin-left: 1.5rem;
+  padding-top: 1rem;
+}
+#preview {
+  width: 100%;
+  height: 100%;
+  //   background-color: $darkGrey;
+  border-radius: 2rem;
+  color: $textColor;
+}
+
+// Instructions Section
+.instructionsSection {
+  margin-top: 3rem;
+  margin-left: 2rem;
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}

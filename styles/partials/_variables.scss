@@ -1,0 +1,42 @@
+$backgroundColor: #171717;
+$textColor: #fff;
+$gradient: linear-gradient(
+  90deg,
+  rgba(91, 134, 229, 1) 0%,
+  rgba(54, 209, 220, 1) 100%
+);
+$darkGrey: #404040;
+$lightGrey: #808080;
+$successColor: #59eb6d;
+$errorColor: #f76564;
+
+$fontWeight: (
+  "light": 300,
+  "reg": 400,
+  "med": 500,
+  "bold": 800,
+);
+
+@function weight($weight-name) {
+  @return map-get($fontWeight, $weight-name);
+}
+
+@mixin flexCenter($dir) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $dir;
+}
+
+@mixin gradientText($fontWeight) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: $fontWeight;
+}
+
+@mixin link {
+  color: $textColor;
+  text-decoration: none;
+  font-size: 1.8rem;
+}

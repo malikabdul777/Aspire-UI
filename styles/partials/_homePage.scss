@@ -1,0 +1,357 @@
+// Hero Content
+.heroSection {
+  // height: 90vh;
+}
+.heroContentContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 10rem;
+  padding-inline: 4rem;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  margin-inline: auto;
+}
+.heroLeftContent {
+  width: 40%;
+}
+.heroTitle {
+  font-size: 4rem;
+}
+.heroImage {
+  height: 35rem;
+}
+
+// whyChoose
+.whyChooseSec {
+  @include flexCenter(column);
+  margin-top: 10rem;
+  justify-content: flex-start;
+  padding-top: 10rem;
+  h2 {
+    font-size: 3rem;
+  }
+}
+.whyReasonBoxesContainer {
+  @include flexCenter(row);
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+.whyReasonBox {
+  width: 35rem;
+  height: 35rem;
+  background-color: $darkGrey;
+  margin-right: 5rem;
+  border-radius: 2rem;
+  padding: 5rem;
+  @include flexCenter(column);
+  transform-style: preserve-3d;
+  transform: perspective(150rem);
+
+  &:nth-child(2) {
+    margin-top: 15rem;
+  }
+
+  .fastImage {
+    width: 15rem;
+    margin-left: -2rem;
+    margin-bottom: 3rem;
+    transform: translateZ(5rem);
+  }
+  .codeEditorImage {
+    width: 12rem;
+    height: 12rem;
+    margin-bottom: 3rem;
+    border-radius: 20rem;
+    transform: translateZ(5rem);
+  }
+}
+.whyText {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: weight(med);
+  transform: translateZ(5rem);
+}
+
+// Components Sneakpeek
+.sneakPeek {
+  @include flexCenter(column);
+  margin-top: 5rem;
+  justify-content: flex-start;
+  padding-top: 10rem;
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+  .componentBoxesContainer {
+    display: flex;
+  }
+  .componentBoxes {
+    height: 22rem;
+    width: 30rem;
+    border: 0.3rem solid $darkGrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .componentBoxesOne {
+    border-top-left-radius: 4rem;
+  }
+  .componentBoxesThree {
+    border-top-right-radius: 4rem;
+  }
+  .componentBoxesFour {
+    border-bottom-left-radius: 4rem;
+  }
+  .componentBoxesSix {
+    border-bottom-right-radius: 4rem;
+  }
+}
+
+//Button
+.displayButton {
+  font-family: sans-serif;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(91, 134, 229) 0%,
+    rgb(54, 209, 220) 100%
+  );
+  width: 70%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 18px;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+  border-radius: 10px;
+
+  &:hover {
+    transform: scale(1.06);
+  }
+
+  &:active {
+    transform: scale(0.89);
+  }
+}
+
+// Input Field
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+}
+.label {
+  margin-left: 20px;
+  position: absolute;
+  transition: 0.2s;
+  color: #404040;
+}
+.inputBox {
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: transparent;
+  transition: all 0.2s;
+  outline: 0;
+  color: $textColor;
+  background: linear-gradient(#171717, #171717) padding-box,
+    linear-gradient(90deg, rgb(91, 134, 229) 0%, rgb(54, 209, 220) 100%)
+      border-box;
+  border-radius: 15px;
+  border: 2px solid transparent;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .label {
+    font-size: 20px;
+    cursor: text;
+    top: 10px;
+    color: #808080;
+  }
+}
+.inputBox:focus {
+  ~ .label {
+    position: absolute;
+    top: -30px;
+    display: block;
+    transition: 0.2s;
+    font-size: 18px;
+    color: #fff;
+  }
+}
+
+//Radio Input
+.radioInputContainer {
+  background-color: $textColor;
+  width: 60%;
+  height: 60px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radioInput {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+
+  &:first-of-type {
+    margin-right: 20px;
+  }
+}
+
+// Switch
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+// Rounded sliders
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(
+    90deg,
+    rgb(91, 134, 229) 0%,
+    rgb(54, 209, 220) 100%
+  );
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+// Card
+.cardContainer {
+  width: 80%;
+  height: 100px;
+  background-color: $textColor;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+
+  h3 {
+    color: $backgroundColor;
+    font-size: 20px;
+  }
+  p {
+    color: $errorColor;
+    font-weight: weight(med);
+  }
+  .onlineStatusContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .onlineStatusDot {
+    padding: 6px;
+    background-color: $errorColor;
+    border-radius: 50px;
+    margin-right: 5px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.thumbnail {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+//Spinner
+.spinner {
+  width: 5rem;
+  height: 50px;
+
+  span {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border: 0.5rem solid transparent;
+    border-radius: 50%;
+    border-right-color: $textColor;
+    animation: spinner-anim 0.8s linear infinite;
+  }
+}
+
+@keyframes spinner-anim {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Collaboratesection
+.collaboratesection {
+  @include flexCenter(column);
+  margin-top: 10rem;
+  justify-content: flex-start;
+  padding-top: 10rem;
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+  h3 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  p {
+    width: 45%;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
