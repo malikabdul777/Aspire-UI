@@ -63,18 +63,11 @@ cssCodeInstance.on("change", function () {
 // Change iFrame when you receive changes
 function update() {
   let preview = codePreview.contentWindow.document;
-  let codeTemplate =
-    `
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <style>` +
-    cssCodeInstance.getValue() +
-    `</style>
-    <body style="height:7rem;color:#fff;font-size:20px;font-family:sans-serif;display:flex; justify-content: center;align-items: center;">` +
-    htmlCodeInstance.getValue() +
-    `</body>
-    </html>`;
+  let codeTemplate = `
+  <div style="height:100%;color:#fff;font-size:20px;font-family:sans-serif;display:flex; justify-content: center;align-items: center;">${htmlCodeInstance.getValue()} 
+  <style> 
+  ${cssCodeInstance.getValue()} +
+  </style></div>`;
   preview.open();
   preview.write(codeTemplate);
   preview.close();
