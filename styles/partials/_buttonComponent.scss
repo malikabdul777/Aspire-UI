@@ -41,13 +41,13 @@
   position: relative;
 }
 .htmlBox {
-  background-color: #272822;
+  background-color: #0f111a;
   //   resize: horizontal;
   margin-right: 10rem;
   border: none;
 }
 .cssBox {
-  background-color: #272822;
+  background-color: #0f111a;
 }
 .title {
   width: 100%;
@@ -55,7 +55,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: weight(bold);
+  font-weight: weight(med);
   background-color: $darkGrey;
 }
 .titleText {
@@ -98,7 +98,6 @@
 #preview {
   width: 100%;
   height: 100%;
-  //   background-color: $darkGrey;
   border-radius: 2rem;
   color: $textColor;
 }

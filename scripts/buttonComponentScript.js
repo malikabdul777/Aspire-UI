@@ -11,7 +11,7 @@ const htmlCodeInstance = CodeMirror(htmlInput, {
   lineNumbers: true,
   tabSize: 4,
   mode: "text/html",
-  theme: "monokai",
+  theme: "material-ocean",
   styleActiveLine: true,
   autoCloseTags: true,
   lineWrapping: true,
@@ -20,7 +20,7 @@ const cssCodeInstance = CodeMirror(cssInput, {
   lineNumbers: true,
   tabSize: 4,
   mode: "css",
-  theme: "monokai",
+  theme: "material-ocean",
   styleActiveLine: true,
   lineWrapping: true,
 });

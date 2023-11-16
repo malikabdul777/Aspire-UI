@@ -623,13 +623,13 @@ input:checked + .slider:before {
 }
 
 .htmlBox {
-  background-color: #272822;
+  background-color: #0f111a;
   margin-right: 10rem;
   border: none;
 }
 
 .cssBox {
-  background-color: #272822;
+  background-color: #0f111a;
 }
 
 .title {
@@ -638,7 +638,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
+  font-weight: 500;
   background-color: #404040;
 }
 
