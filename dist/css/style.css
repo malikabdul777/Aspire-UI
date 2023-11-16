@@ -310,8 +310,28 @@ body {
   width: 30rem;
   border: 0.3rem solid #404040;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.sneakPeek .componentBoxes .viewMoreBtn {
+  margin-top: 3rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+.sneakPeek .componentBoxes .viewMoreBtn:hover {
+  transform: scale(1.06);
+}
+.sneakPeek .componentBoxes .viewMoreBtn:active {
+  transform: scale(0.89);
+}
+.sneakPeek .componentBoxes .arrowIconViewMoreBtn {
+  margin-top: 0.3rem;
+  margin-left: 0.7rem;
 }
 .sneakPeek .componentBoxesOne {
   border-top-left-radius: 4rem;
