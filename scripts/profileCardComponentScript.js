@@ -26,14 +26,17 @@ const cssCodeInstance = CodeMirror(cssInput, {
 });
 
 // Bueatifying Code
-const defaultHtml = html_beautify('<button class="button">Button</button>', {
-  indent_size: 3,
-  end_with_newline: true,
-  wrap_line_length: 60,
-});
+const defaultHtml = html_beautify(
+  '<div class="cardContainer"><img src="https://picsum.photos/200" class="thumbnail"><div><h3>Abdul</h3><div class="onlineStatusContainer"><span class="onlineStatusDot"></span><p>Offline</p></div></div></div>',
+  {
+    indent_size: 3,
+    end_with_newline: true,
+    wrap_line_length: 60,
+  }
+);
 
 const defaultCSS = css_beautify(
-  ".button-container{display:flex;width:100%;height:100%;justify-content:center;align-item:center}.button{font-family:sans-serif;outline:0;background:linear-gradient(90deg,#5b86e5 0,#36d1dc 100%);width:500px;border:0;padding:15px;color:#fff;font-size:18px;transition:.4s ease-out;cursor:pointer;border-radius:10px}.button:hover{transform:scale(1.06)}.button:active{transform:scale(.89)}",
+  ".cardContainer{width:400;height:140px;background-color:#fff;border-radius:20px;display:flex;align-items:center;padding-inline:20px;transition:transform .5s;cursor:pointer}.rightContentContainer{display:flex;flex-direction:column;justify-content:center}.cardContainer h3{color:#171717;font-size:24px;margin:0}.cardContainer p{color:#f76564;font-weight:500;margin:0}.cardContainer .onlineStatusContainer{display:flex;justify-content:center;align-items:center;margin-top:10px}.cardContainer .onlineStatusDot{padding:6px;background-color:#f76564;border-radius:50px;margin-right:5px;margin-top:0}.cardContainer:hover{transform:scale(1.05)}.thumbnail{height:100px;width:100px;border-radius:50%;margin-right:15px}",
   {
     indent_size: 3,
     end_with_newline: true,

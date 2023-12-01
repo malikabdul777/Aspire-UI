@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <!-- codemirror -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"
+      integrity="sha512-8RnEqURPUc5aqFEN04aQEiPlSAdE0jlFS/9iGgUyNtwFnSKCXhmB6ZTNl7LnDtDWKabJIASzXrzD0K+LYexU9g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css"
+      integrity="sha512-uf06llspW44/LZpHzHT6qBOIVODjWtv4MxCricRxkzvopAlSWnTf6hpZTFxuuZcuNE9CBQhqE0Seu1CoRk84nQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/material-ocean.min.css"
+      integrity="sha512-BIm4eVlsEb8Lq7qmkw41f9Cllgpsgq1dLr7O3dOdC4nnrn5pohUXfjjdiAMDJpsdxmwHNM/qgqY5Vai/9/MLmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/edit/closetag.min.js"
+      integrity="sha512-XYx5xhl4B5vKNlaRBWh/nlti0+IPM6eT+dSFc3/oc4rERn2DpwbS3q4OblprqqBLXyRSVePKmf+8mHkDLtGZpg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <!--Codemirror modes -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js"
+      integrity="sha512-I6CdJdruzGtvDyvdO4YsiAq+pkWf2efgd1ZUSK2FnM/u2VuRASPC7GowWQrWyjxCZn6CT89s3ddGI+be0Ak9Fg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/css/css.min.js"
+      integrity="sha512-rQImvJlBa8MV1Tl1SXR5zD2bWfmgCEIzTieFegGg89AAt7j/NBEe50M5CqYQJnRwtkjKMmuYgHBqtD1Ubbk5ww=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/xml/xml.min.js"
+      integrity="sha512-LarNmzVokUmcA7aUDtqZ6oTS+YXmUKzpGdm8DxC46A6AHu+PQiYCUlwEGWidjVYMo/QXZMFMIadZtrkfApYp/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.11/beautify.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.11/beautify-css.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.11/beautify-html.min.js"
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="../dist/css/style.css" />
+    <script
+      type="text/javascript"
+      src="../scripts/radioComponentScript.js"
+      defer
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/a logo.ico" />
+    <title>Radio Input Component</title>
+  </head>
+  <body>
+    <section class="section">
+      <nav class="navBar">
+        <a href="../index.html" class="logo gradientText">Aspire UI</a>
+        <div class="navLinks">
+          <a href="../index.html" class="navLink">Home</a
+          ><a href="#" class="navLink">Components</a
+          ><a href="#" class="navLink">Contribute</a
+          ><a href="#" class="navLink">Tutorial</a>
+        </div>
+      </nav>
+    </section>
+    <section class="section componentSection">
+      <h2 class="gradientText componentTitle">Radio Input</h2>
+      <div class="container">
+        <div class="output">
+          <h2>Output</h2>
+          <iframe id="preview" frameborder="0"></iframe>
+        </div>
+        <div class="editorContainer">
+          <div class="htmlBox codeBox">
+            <div class="title">
+              <span class="titleText"> HTML Snippet </span>
+            </div>
+            <div class="copyBtnContainer htmlCopy">
+              <span class="material-symbols-outlined copyIcon">
+                content_copy
+              </span>
+            </div>
+          </div>
+          <div class="cssBox codeBox">
+            <div class="title">
+              <span class="titleText"> CSS Snippet</span>
+            </div>
+            <div class="copyBtnContainer cssCopy">
+              <span class="material-symbols-outlined copyIcon">
+                content_copy
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section instructionsSection">
+      <h2>Usage instructions</h2>
+      <p>
+        The above code is editable with live preview. You can play around with
+        colors and adjust everything as you like and to the style that matches
+        your project. Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled it to make a type specimen book. It has survived not only
+        five centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged.
+      </p>
+    </section>
+    <footer class="footer">
+      <div class="footerContainer">
+        <div>
+          <a href="./index.html" class="footerLogo gradientText">Aspire UI</a>
+        </div>
+        <div class="sitemapContainer">
+          <h3>Sitemap</h3>
+          <a href="../index.html">Home</a><a href="#">Components</a
+          ><a href="#">Contribute</a><a href="#">Tutorial</a>
+        </div>
+        <div class="contactUsContainer">
+          <h3>Contact us</h3>
+          <div class="iconsContainer">
+            <a href="mailto:ashaik6258@conestogac.on.ca">
+              <div class="contsctIcon">
+                <span class="material-symbols-outlined"> mail </span>
+              </div>
+            </a>
+            <a href="tel:548-255-0105">
+              <div class="contsctIcon">
+                <span class="material-symbols-outlined"> call </span>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+      <span class="footerDivider"></span>
+      <p class="footerDis">Copyright © 2023 - Aspire UI</p>
+    </footer>
+  </body>
+</html>

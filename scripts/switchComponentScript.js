@@ -47,21 +47,8 @@ const defaultCSS = css_beautify(
 htmlCodeInstance.setValue(defaultHtml);
 cssCodeInstance.setValue(defaultCSS);
 
-// Showing code ouput when page loads
-window.addEventListener("load", function () {
-  update();
-});
-
-// Run update() function, when the instances have change
-htmlCodeInstance.on("change", function () {
-  update();
-});
-cssCodeInstance.on("change", function () {
-  update();
-});
-
 // Change iFrame when you receive changes
-function update() {
+const update = () => {
   let preview = codePreview.contentWindow.document;
   let codeTemplate = `
   <div style="height:100%;color:#fff;font-size:20px;font-family:sans-serif;display:flex; justify-content: center;align-items: center;">${htmlCodeInstance.getValue()} 
@@ -71,7 +58,14 @@ function update() {
   preview.open();
   preview.write(codeTemplate);
   preview.close();
-}
+};
+
+// Showing code ouput when page loads
+window.addEventListener("load", update);
+
+// Run update() function, when the instances have change
+htmlCodeInstance.on("change", update);
+cssCodeInstance.on("change", update);
 
 htmlCopyBtn.addEventListener("click", () =>
   navigator.clipboard.writeText(htmlCodeInstance.getValue())
