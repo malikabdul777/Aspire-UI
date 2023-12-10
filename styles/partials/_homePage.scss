@@ -1,11 +1,86 @@
+// Splash Screen
+.splashScreen {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  clip-path: circle(70.7% at 50% 50%);
+  height: 100vh;
+  width: 100%;
+}
+
+.secondSplashBackground {
+  background: $gradient;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  clip-path: circle(70.7% at 50% 50%);
+  height: 100vh;
+  width: 100%;
+}
+.splashScreenText {
+  // @include gradientText(weight(bold));
+  font-size: 5rem;
+  color: black;
+}
+
+#LoaderContainer {
+  display: block;
+  margin-top: 3rem;
+}
+.circle {
+  display: inline-block;
+  background-color: $backgroundColor;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 2.5rem;
+}
+
+#ball-1 {
+  animation: 1.2s 0s infinite bounce;
+}
+#ball-2 {
+  animation: 1.2s 0.3s infinite bounce;
+}
+#ball-3 {
+  animation: 1.2s 0.6s infinite bounce;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(1rem);
+  }
+  60% {
+    transform: translateY(-1rem);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+
 // Hero Content
 .heroSection {
   // height: 90vh;
 }
+
 .heroContentContainer {
   display: flex;
   justify-content: space-between;
-  margin-block: 10rem;
+  margin-top: -8rem;
   padding-inline: 4rem;
   align-items: center;
   height: 100%;
@@ -23,56 +98,96 @@
 }
 
 // whyChoose
-.whyChooseSec {
-  @include flexCenter(column);
-  margin-top: 10rem;
-  justify-content: flex-start;
-  padding-top: 10rem;
-  h2 {
-    font-size: 3rem;
-  }
-}
 .whyReasonBoxesContainer {
   @include flexCenter(row);
   justify-content: flex-start;
   margin-top: 1rem;
 }
-.whyReasonBox {
-  width: 35rem;
-  height: 35rem;
-  background-color: $darkGrey;
-  margin-right: 5rem;
-  border-radius: 2rem;
-  padding: 5rem;
-  @include flexCenter(column);
-  transform-style: preserve-3d;
-  transform: perspective(150rem);
 
-  &:nth-child(2) {
-    margin-top: 15rem;
-  }
-
-  .fastImage {
-    width: 15rem;
-    margin-left: -2rem;
-    margin-bottom: 3rem;
-    transform: translateZ(5rem);
-  }
-  .codeEditorImage {
-    width: 12rem;
-    height: 12rem;
-    margin-bottom: 3rem;
-    border-radius: 20rem;
-    transform: translateZ(5rem);
+.whyChooseSec {
+  display: flex;
+  height: auto;
+  color: black;
+  h2 {
+    font-size: 3rem;
   }
 }
-.whyText {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: weight(med);
-  transform: translateZ(5rem);
+.left {
+  width: 50%;
 }
-
+.detailsWrapper {
+  margin-inline: auto 0;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.details {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    font-size: 5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+.right {
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.photos {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.whyImageContainer {
+  position: absolute;
+  width: 80rem;
+  height: 70rem;
+  border-radius: 5rem;
+  @include flexCenter(row);
+}
+.whyImageContainerOne {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 20;
+  background-color: #ecd8c0;
+}
+.whyImageContainerTwo {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 19;
+  background-color: #cdd1ff;
+}
+.whyImageContainerThree {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 18;
+  background-color: #ffb399;
+}
+.whyImage {
+  object-fit: cover;
+  width: 65rem;
+  height: 40rem;
+  border-radius: 6rem;
+}
+.whyImageOne {
+  box-shadow: -9px 17px 27px -3px #c5863d;
+}
+.whyImageTwo {
+  box-shadow: -9px 17px 27px -3px #8992ff;
+}
+.whyImageThree {
+  box-shadow: -9px 17px 27px -3px #ff8055;
+}
 // Components Sneakpeek
 .sneakPeek {
   @include flexCenter(column);
@@ -358,11 +473,12 @@ input:checked + .slider:before {
 }
 
 // Collaboratesection
-.collaboratesection {
+.collaborateSection {
   @include flexCenter(column);
   margin-top: 10rem;
   justify-content: flex-start;
   padding-top: 10rem;
+  height: 50vh;
   h2 {
     font-size: 4rem;
     margin-bottom: 5rem;

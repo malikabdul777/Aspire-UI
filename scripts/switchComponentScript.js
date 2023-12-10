@@ -5,6 +5,12 @@ const htmlInput = document.querySelector(".htmlBox");
 const cssInput = document.querySelector(".cssBox");
 const htmlCopyBtn = document.querySelector(".htmlCopy");
 const cssCopyBtn = document.querySelector(".cssCopy");
+const htmlResetBtn = document.querySelector(".htmlReset");
+const cssResetBtn = document.querySelector(".cssReset");
+const cssCopyIcon = document.querySelector(".cssCopyIcon");
+const htmlCopyIcon = document.querySelector(".htmlCopyIcon");
+const htmlResetIcon = document.querySelector(".htmlResetIcon");
+const cssResetIcon = document.querySelector(".cssResetIcon");
 
 //Code Mirror Initialization
 const htmlCodeInstance = CodeMirror(htmlInput, {
@@ -47,6 +53,24 @@ const defaultCSS = css_beautify(
 htmlCodeInstance.setValue(defaultHtml);
 cssCodeInstance.setValue(defaultCSS);
 
+htmlResetBtn.addEventListener("click", () => {
+  htmlCodeInstance.setValue(defaultHtml);
+  htmlResetIcon.textContent = "check_circle";
+
+  setTimeout(() => {
+    htmlResetIcon.textContent = "restart_alt";
+  }, 1500);
+});
+
+cssResetBtn.addEventListener("click", () => {
+  cssCodeInstance.setValue(defaultCSS);
+
+  cssResetIcon.textContent = "check_circle";
+  setTimeout(() => {
+    cssResetIcon.textContent = "restart_alt";
+  }, 1500);
+});
+
 // Change iFrame when you receive changes
 const update = () => {
   let preview = codePreview.contentWindow.document;
@@ -67,10 +91,18 @@ window.addEventListener("load", update);
 htmlCodeInstance.on("change", update);
 cssCodeInstance.on("change", update);
 
-htmlCopyBtn.addEventListener("click", () =>
-  navigator.clipboard.writeText(htmlCodeInstance.getValue())
-);
+htmlCopyBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(htmlCodeInstance.getValue());
+  htmlCopyIcon.textContent = "library_add_check";
+  setTimeout(() => {
+    htmlCopyIcon.textContent = " content_copy";
+  }, 1500);
+});
 
-cssCopyBtn.addEventListener("click", () =>
-  navigator.clipboard.writeText(cssCodeInstance.getValue())
-);
+cssCopyBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(cssCodeInstance.getValue());
+  cssCopyIcon.textContent = "library_add_check";
+  setTimeout(() => {
+    cssCopyIcon.textContent = " content_copy";
+  }, 1500);
+});

@@ -9,7 +9,7 @@
 }
 html {
   font-size: 62.5% !important;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
 // Scrollbar
 /* width */
 ::-webkit-scrollbar {
-  width: 1.4rem;
+  width: 1.3rem;
 }
 
 /* Track */
@@ -37,11 +37,35 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $lightGrey;
+  background: $darkGrey;
   border-radius: 1rem;
   cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $darkGrey;
+  background: $lightGrey;
 }
+
+// Lenis Smooth Scroll
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+// .char {
+//   display: inline-block;
+// }

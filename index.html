@@ -9,40 +9,69 @@
     />
     <link rel="stylesheet" href="./dist/css/style.css" />
     <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"
+      defer
+    ></script>
+    <script
       type="text/javascript"
       src="./scripts/externalScripts/tilt.js"
       defer
     ></script>
 
+    <script
+      type="text/javascript"
+      src="./scripts/homePageScript.js"
+      defer
+    ></script>
     <link rel="icon" type="image/x-icon" href="../assets/images/a logo.ico" />
     <title>Aspire UI - Home</title>
   </head>
   <body>
-    <section class="section heroSection">
+    <div class="splashScreen">
+      <h2 class="splashScreenText">AspireUI</h2>
+      <div id="LoaderContainer">
+        <div id="ball-1" class="circle"></div>
+        <div id="ball-2" class="circle"></div>
+        <div id="ball-3" class="circle"></div>
+      </div>
+    </div>
+    <!-- <div class="secondSplashBackground"></div> -->
+    <section class="section heroSection" data-bgColor="black white">
       <nav class="navBar">
         <a href="./index.html" class="logo gradientText">Aspire UI</a>
         <div class="navLinks">
           <a href="#" class="navLink">Home</a
-          ><a href="#" class="navLink">Components</a
-          ><a href="#" class="navLink">Contribute</a
-          ><a href="#" class="navLink">Tutorial</a>
+          ><a href="./pages/components.html" class="navLink">Components</a
+          ><a href="#" class="navLink">Contribute</a>
         </div>
       </nav>
       <div class="heroContentContainer">
         <div class="heroLeftContent">
-          <h2 class="heroTitle">
-            Elevate Your Web apps with
-            <span class="gradientText">Ready-to-Use</span> code Snippets
-          </h2>
+          <div style="overflow: hidden">
+            <h2 class="heroTitle">
+              Elevate Your Web apps with
+              <span class="gradientText">Ready-to-Use</span> code Snippets
+            </h2>
+          </div>
+          <!-- <div style="overflow: hidden"> -->
           <button class="btnContainer">
             <a href="#">Explore </a>
             <span class="material-symbols-outlined"> arrow_right_alt </span>
           </button>
+          <!-- </div> -->
         </div>
         <img src="./assets/images/Hero Image.png" class="heroImage" />
       </div>
     </section>
-    <section class="section sneakPeek">
+    <section class="section sneakPeek" data-bgColor="black white">
       <h2>Components <span class="gradientText">Sneak Peek</span></h2>
       <div>
         <div class="componentBoxesContainer">
@@ -125,8 +154,10 @@
         </div>
       </div>
     </section>
-    <section class="whyChooseSec section">
-      <h2>Why Choose <span class="gradientText">Aspire UI</span> ?</h2>
+    <!-- <section class="whyChooseSec section">
+      <h2 class="whyChooseHeading">
+        Why Choose <span class="gradientText">Aspire UI</span> ?
+      </h2>
       <div class="whyReasonBoxesContainer">
         <div class="whyReasonBox" data-tilt>
           <img src="./assets/images/fast.png" class="fastImage" />
@@ -142,9 +173,61 @@
           <p class="whyText">No manual code repetetion</p>
         </div>
       </div>
+    </section> -->
+    <section class="whyChooseSec" data-bgColor="black black">
+      <div class="left">
+        <div class="detailsWrapper">
+          <div class="details detailsOne">
+            <h2>Helps you develope fast!</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s,
+            </p>
+          </div>
+          <div class="details detailsTwo">
+            <h2>Helps you maintain consistency</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s,
+            </p>
+          </div>
+          <div class="details detailsThree">
+            <h2>No manual code repetition</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s,
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="photos">
+          <div class="whyImageContainer whyImageContainerOne">
+            <img
+              src="./assets/images/develope.jpg"
+              class="whyImage whyImageOne"
+            />
+          </div>
+          <div class="whyImageContainer whyImageContainerTwo">
+            <img
+              src="./assets/images/consistency.jpg"
+              class="whyImage whyImageTwo"
+            />
+          </div>
+          <div class="whyImageContainer whyImageContainerThree">
+            <img
+              src="./assets/images/repetitive.jpg"
+              class="whyImage whyImageThree"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section collaboratesection">
+    <section class="section collaborateSection" data-bgColor="black white">
       <h2>Want to<span class="gradientText"> Collaborate</span> ?</h2>
       <h3>Help add more components and make them more stable!</h3>
       <p>
@@ -157,7 +240,7 @@
         <span class="material-symbols-outlined"> arrow_right_alt </span>
       </button>
     </section>
-    <footer class="footer">
+    <footer class="footer" data-bgColor="black white">
       <div class="footerContainer">
         <div>
           <a href="./index.html" class="footerLogo gradientText">Aspire UI</a>
@@ -165,7 +248,7 @@
         <div class="sitemapContainer">
           <h3>Sitemap</h3>
           <a href="#">Home</a><a href="#">Components</a
-          ><a href="#">Contribute</a><a href="#">Tutorial</a>
+          ><a href="#">Contribute</a>
         </div>
         <div class="contactUsContainer">
           <h3>Contact us</h3>
@@ -186,5 +269,8 @@
       <span class="footerDivider"></span>
       <p class="footerDis">Copyright © 2023 - Aspire UI</p>
     </footer>
+    <!-- <div class="cursorCircle"></div>
+    <div class="cursor"></div>
+    <div class="cursorClick"></div> -->
   </body>
 </html>

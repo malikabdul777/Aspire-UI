@@ -1,0 +1,55 @@
+// Cursor Circle
+.cursorCircle {
+  z-index: 99;
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid $accentColor;
+  border-radius: 50%;
+  position: fixed;
+  opacity: 1;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  //   transform: translate(calc(-50%), -50%);
+}
+.cursor {
+  z-index: 99;
+  height: 1rem;
+  width: 1rem;
+  background-color: $accentColor;
+  border-radius: 50%;
+  position: fixed;
+  mix-blend-mode: difference;
+  transition: all 0.5s ease;
+  pointer-events: none;
+  transform: translate(calc(-50% + 15px), -50%);
+}
+.cursorClick {
+  z-index: 99;
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid $accentColor;
+  border-radius: 50%;
+  position: fixed;
+  opacity: 0.9;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  pointer-events: none;
+  //   transform: translate(calc(-50%), -50%);
+}
+
+.shrink {
+  animation: realCursorClickAnim 0.5s infinite;
+  border: 0.1rem solid $accentColor;
+}
+.expand {
+  animation: cursorClickAnim 0.5s infinite;
+  border: 0.1rem solid $accentColor;
+}
+.cursorGrow {
+  transform: scale(17);
+}
+.cursorGrowSmall {
+  transform: scale(3);
+}
