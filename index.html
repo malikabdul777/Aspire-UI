@@ -20,11 +20,6 @@
       src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"
       defer
     ></script>
-    <script
-      type="text/javascript"
-      src="./scripts/externalScripts/tilt.js"
-      defer
-    ></script>
 
     <script
       type="text/javascript"
@@ -50,7 +45,8 @@
         <div class="navLinks">
           <a href="#" class="navLink">Home</a
           ><a href="./pages/components.html" class="navLink">Components</a
-          ><a href="#" class="navLink">Contribute</a>
+          ><a href="#" class="navLink contributeLinkNav">Contribute</a>
+          <a href="./pages/contactUs.html" class="navLink">Contact Us</a>
         </div>
       </nav>
       <div class="heroContentContainer">
@@ -61,12 +57,9 @@
               <span class="gradientText">Ready-to-Use</span> code Snippets
             </h2>
           </div>
-          <!-- <div style="overflow: hidden"> -->
-          <button class="btnContainer">
-            <a href="#">Explore </a>
-            <span class="material-symbols-outlined"> arrow_right_alt </span>
-          </button>
-          <!-- </div> -->
+          <a href="./pages/components.html" class="exploreBtn">
+            <button class="btnContainer">Explore</button></a
+          >
         </div>
         <img src="./assets/images/Hero Image.png" class="heroImage" />
       </div>
@@ -89,7 +82,7 @@
               <input class="inputBox" placeholder="Name" id="name" />
               <label class="label" for="name">Name</label>
             </div>
-            <a class="viewMoreBtn" href="#"
+            <a class="viewMoreBtn" href="./pages/text-input-component.html"
               >View Now
               <span class="material-symbols-outlined arrowIconViewMoreBtn">
                 arrow_right_alt
@@ -154,26 +147,6 @@
         </div>
       </div>
     </section>
-    <!-- <section class="whyChooseSec section">
-      <h2 class="whyChooseHeading">
-        Why Choose <span class="gradientText">Aspire UI</span> ?
-      </h2>
-      <div class="whyReasonBoxesContainer">
-        <div class="whyReasonBox" data-tilt>
-          <img src="./assets/images/fast.png" class="fastImage" />
-
-          <p class="whyText">Helps you develope fast!</p>
-        </div>
-        <div class="whyReasonBox" data-tilt>
-          <img src="./assets/images/codebox.png" class="codeEditorImage" />
-          <p class="whyText">Helps you maintain consistency</p>
-        </div>
-        <div class="whyReasonBox" data-tilt>
-          <img src="./assets/images/programmer.jpg" class="codeEditorImage" />
-          <p class="whyText">No manual code repetetion</p>
-        </div>
-      </div>
-    </section> -->
     <section class="whyChooseSec" data-bgColor="black black">
       <div class="left">
         <div class="detailsWrapper">
@@ -227,7 +200,11 @@
       </div>
     </section>
 
-    <section class="section collaborateSection" data-bgColor="black white">
+    <section
+      class="section collaborateSection"
+      id="collaborateSection"
+      data-bgColor="black white"
+    >
       <h2>Want to<span class="gradientText"> Collaborate</span> ?</h2>
       <h3>Help add more components and make them more stable!</h3>
       <p>
@@ -235,10 +212,6 @@
         React component snippets and enhancing their stability. Your expertise
         can help us create a richer resource for developers worldwide.
       </p>
-      <button class="btnContainer">
-        <a href="#">Know How </a>
-        <span class="material-symbols-outlined"> arrow_right_alt </span>
-      </button>
     </section>
     <footer class="footer" data-bgColor="black white">
       <div class="footerContainer">
@@ -247,8 +220,9 @@
         </div>
         <div class="sitemapContainer">
           <h3>Sitemap</h3>
-          <a href="#">Home</a><a href="#">Components</a
-          ><a href="#">Contribute</a>
+          <a href="#">Home</a><a href="./pages/components.html">Components</a
+          ><a href="#" class="contributeLinkFooter">Contribute</a>
+          <a href="./pages/contactUs.html">Contact Us</a>
         </div>
         <div class="contactUsContainer">
           <h3>Contact us</h3>
@@ -269,8 +243,5 @@
       <span class="footerDivider"></span>
       <p class="footerDis">Copyright © 2023 - Aspire UI</p>
     </footer>
-    <!-- <div class="cursorCircle"></div>
-    <div class="cursor"></div>
-    <div class="cursorClick"></div> -->
   </body>
 </html>

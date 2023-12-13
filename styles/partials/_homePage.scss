@@ -96,7 +96,13 @@
 .heroImage {
   height: 35rem;
 }
-
+.exploreBtn {
+  @include link;
+  color: #fff;
+}
+.navLink {
+  font-size: 2rem;
+}
 // whyChoose
 .whyReasonBoxesContainer {
   @include flexCenter(row);

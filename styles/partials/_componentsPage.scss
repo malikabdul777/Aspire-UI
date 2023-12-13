@@ -1,0 +1,65 @@
+.componentsPageHeader {
+  padding-top: 2rem;
+  padding-inline: 10rem;
+}
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    margin-top: 8rem;
+    font-size: 3.4rem;
+  }
+}
+.table {
+  background-color: #1e1e1e;
+  font-size: 2rem;
+  margin-top: 5rem;
+  width: 90rem;
+  padding: 3rem 5rem;
+  border-radius: 5rem;
+  padding-bottom: 6rem;
+  tr:not(:first-child) {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 90rem;
+    align-items: center;
+    margin-inline: 7rem -7rem;
+  }
+}
+.tableHeader {
+  background-color: #999999;
+  display: flex;
+  justify-content: space-around;
+  width: 90rem;
+  border-radius: 2rem;
+}
+th {
+  padding-block: 3rem;
+  color: $backgroundColor;
+}
+td {
+  flex: 1;
+  a {
+    display: flex;
+    align-items: center;
+    @include link;
+  }
+}
+.attachmentIcon {
+  margin-left: 1rem;
+  transform: rotate(-50deg);
+  color: $accentColor;
+}
+.stabilityIndicator {
+  padding: 0.3rem 1.5rem;
+  border-radius: 3rem;
+}
+.stable {
+  background-color: $successColor;
+}
+.notStable {
+  background-color: $errorColor;
+}

@@ -1,32 +1,9 @@
 "use strict";
-const cursorCircle = document.querySelector(".cursorCircle");
-const cursor = document.querySelector(".cursor");
-const cursorClick = document.querySelector(".cursorClick");
 
-// Custom Cursor
-// document.addEventListener("mousemove", (e) => {
-//   cursorCircle.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px`);
-//   cursorClick.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px`);
-
-//   cursor.setAttribute(
-//     "style",
-//     `top: ${e.pageY + 8.8}px; left: ${e.pageX + 8.8}px`
-//   );
-// });
-
-// document.addEventListener("click", () => {
-//   cursorClick.classList.add("expand");
-
-//   setTimeout(() => {
-//     cursorClick.classList.remove("expand");
-//   }, 500);
-
-//   cursorCircle.classList.add("shrink");
-
-//   setTimeout(() => {
-//     cursorCircle.classList.remove("shrink");
-//   }, 500);
-// });
+const contributeLinkFooter = document.querySelector(".contributeLinkFooter");
+const collaborateSection = document.querySelector(".collaborateSection");
+const contributeLinkNav = document.querySelector(".contributeLinkNav");
+const splashScreen = document.querySelector(".splashScreen");
 
 // Smooth Scroll
 gsap.registerPlugin(ScrollTrigger);
@@ -43,7 +20,14 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-lenis.stop();
+// Session storage check if this  is first load for hiding splash screen
+let isNotFirstLoad = sessionStorage.getItem("notFirstLoad");
+if (isNotFirstLoad !== null) {
+  splashScreen.style.display = "none";
+}
+
+if (isNotFirstLoad === null) lenis.stop();
+
 // GSAP Scroll Trigger integration
 
 lenis.on("scroll", ScrollTrigger.update);
@@ -59,19 +43,21 @@ gsap.ticker.lagSmoothing(0);
 // GSAP animations
 let timeLine0 = gsap.timeline({ delay: 0.8 });
 
-timeLine0.to(
-  ".splashScreen",
-  {
-    clipPath: "circle(0% at 50% 50%)",
-  },
-  "+=0.5"
-);
+if (isNotFirstLoad === null)
+  timeLine0.to(
+    ".splashScreen",
+    {
+      clipPath: "circle(0% at 50% 50%)",
+    },
+    "+=0.5"
+  );
 
-setInterval(() => {
-  lenis.start();
-}, 1800);
+if (isNotFirstLoad === null)
+  setInterval(() => {
+    lenis.start();
+  }, 1800);
 
-let timeline1 = gsap.timeline({ delay: 1.5 });
+let timeline1 = gsap.timeline({ delay: isNotFirstLoad === null ? 1.5 : 0 });
 
 timeline1.from(".heroTitle", 1, {
   opacity: 0,
@@ -216,3 +202,13 @@ gsap
     },
     { backgroundColor: "#fcb" }
   );
+
+contributeLinkFooter.addEventListener("click", () => {
+  lenis.scrollTo("#collaborateSection");
+});
+
+contributeLinkNav.addEventListener("click", () => {
+  lenis.scrollTo("#collaborateSection");
+});
+
+sessionStorage.setItem("notFirstLoad", "yes");

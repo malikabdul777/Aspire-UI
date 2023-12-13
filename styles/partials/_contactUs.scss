@@ -1,0 +1,85 @@
+.mainContactUsWrapper {
+  display: flex;
+  padding-top: 2rem;
+  padding-inline: 10rem;
+  height: 70vh;
+  align-items: flex-start;
+  margin-top: 10rem;
+}
+.contactUsLeftContent {
+  flex: 1;
+  margin-left: 9rem;
+  margin-top: 10rem;
+  h2 {
+    font-size: 4rem;
+    width: 70rem;
+  }
+  p {
+    font-size: 2rem;
+    width: 60rem;
+  }
+}
+.formWrapper {
+  flex: 1;
+}
+.inputForm {
+  background-color: $darkGrey;
+  //   height: 60rem;
+  width: 50rem;
+  border-radius: 2rem;
+  padding: 7rem 5rem;
+}
+.textInput {
+  width: 100%;
+  height: 5rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  outline: none;
+  background-color: $backgroundColor;
+  color: $textColor;
+  border: none;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.queryBox {
+  font-family: "Poppins", sans-serif;
+  resize: none;
+  border-radius: 1rem;
+  padding: 2rem;
+  outline: none;
+  background-color: $backgroundColor;
+  color: $textColor;
+  border: none;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.button-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  font-family: sans-serif;
+  outline: 0;
+  background: linear-gradient(90deg, #5b86e5 0, #36d1dc 100%);
+  width: 100%;
+  border: 0;
+  padding: 1.5rem 2rem;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button:hover {
+  transform: scale(1.06);
+}
+
+.button:active {
+  transform: scale(0.89);
+}
