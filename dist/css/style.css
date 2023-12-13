@@ -132,9 +132,6 @@ html.lenis {
 .navLink:hover {
   color: rgb(54, 209, 220);
 }
-.navLink:active {
-  font-size: 1.6rem;
-}
 
 .footer {
   height: 45rem;
