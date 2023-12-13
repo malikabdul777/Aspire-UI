@@ -953,6 +953,7 @@ input:checked + .slider:before {
   padding: 3rem 5rem;
   border-radius: 5rem;
   padding-bottom: 6rem;
+  border: 0.1rem solid rgba(77, 87, 134, 0.3843137255);
 }
 .table tr:not(:first-child) {
   margin-top: 5rem;
