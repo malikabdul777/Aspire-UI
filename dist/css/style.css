@@ -824,12 +824,12 @@ input:checked + .slider:before {
   background-color: #0f111a;
   margin-right: 10rem;
   border: none;
-  border: 0.1rem solid rgba(77, 87, 134, 0.3843137255);
+  border: 0.3rem solid rgba(77, 87, 134, 0.3843137255);
 }
 
 .cssBox {
   background-color: #0f111a;
-  border: 0.1rem solid rgba(77, 87, 134, 0.3843137255);
+  border: 0.3rem solid rgba(77, 87, 134, 0.3843137255);
 }
 
 .titleBoxContainer {
