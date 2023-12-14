@@ -499,3 +499,9 @@ input:checked + .slider:before {
     font-size: 2rem;
   }
 }
+
+.netlifyLink {
+  color: $textColor;
+  text-decoration: none;
+  font-size: 2rem;
+}
