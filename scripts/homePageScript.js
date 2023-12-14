@@ -162,7 +162,7 @@ gsap
   .fromTo(
     ".whyChooseSec",
     {
-      backgroundColor: "#000",
+      backgroundColor: "#171717",
     },
     { backgroundColor: "#f0e0cd" }
   );
