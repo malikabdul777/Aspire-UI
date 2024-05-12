@@ -101,18 +101,18 @@ timeline1.from(
   },
   "-0.05"
 );
-timeline1.from(".sneakPeek", {
-  x: 500,
-  opacity: 0,
+// timeline1.from(".sneakPeek", {
+//   x: 500,
+//   opacity: 0,
 
-  scrollTrigger: {
-    trigger: ".sneakPeek",
-    // markers: true,
-    start: "top 60%",
-    end: "70% bottom",
-    scrub: true,
-  },
-});
+//   scrollTrigger: {
+//     trigger: ".sneakPeek",
+//     // markers: true,
+//     start: "top 60%",
+//     end: "70% bottom",
+//     scrub: true,
+//   },
+// });
 
 // timeline1.from(".collaborateSection", {
 //   x: -500,
