@@ -8,37 +8,55 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link rel="stylesheet" href="../dist/css/style.css" />
-
+    <script
+      type="text/javascript"
+      src="../scripts/componentsScript.js"
+      defer
+    ></script>
     <link rel="icon" type="image/x-icon" href="../assets/images/a logo.ico" />
     <title>Aspire UI - Home</title>
   </head>
   <body>
-    <header class="componentsPageHeader">
+    <section class="sectionNoHeight header">
       <nav class="navBar">
         <a href="../index.html" class="logo gradientText">Aspire UI</a>
         <div class="navLinks">
           <a href="../index.html" class="navLink">Home</a
-          ><a href="#" class="navLink">Components</a
+          ><a href="./components.html" class="navLink">Components</a
           ><a href="../index.html#collaborateSection" class="navLink"
             >Contribute</a
-          ><a href="./contactUs.html" class="navLink">Contact Us</a>
+          ><a href="./contactUs.html" class="navLink">Contact us</a>
         </div>
       </nav>
-    </header>
+      <div class="sideNavMenu">
+        <a href="../index.html" class="navLink">Home</a
+        ><a href="./components.html" class="navLink">Components</a
+        ><a href="../index.html#collaborateSection" class="navLink"
+          >Contribute</a
+        ><a href="./contactUs.html" class="navLink">Contact us</a>
+      </div>
+      <div class="hamburgerMenu">
+        <div class="menuStick"></div>
+        <div class="menuStick"></div>
+        <div class="menuStick"></div>
+      </div>
+    </section>
     <section class="mainWrapper">
       <h2>Components <span class="gradientText">Gallery</span></h2>
-      <div>
+      <div class="tableWrapper">
         <table class="table">
           <tr class="tableHeader">
             <th>Name</th>
-            <th>Dev Status</th>
-            <th>Contributor</th>
+            <th class="stabilityIndicatorHeader">Dev Status</th>
+            <th class="contributorHeader">Contributor</th>
             <th>Link</th>
           </tr>
-          <tr>
+          <tr class="tableRow">
             <td>Button</td>
-            <td><span class="stabilityIndicator stable">Stable</span></td>
-            <td>Abdul</td>
+            <td class="stabilityIndicatorCell">
+              <span class="stabilityIndicator stable">Stable</span>
+            </td>
+            <td class="contributorCell">Abdul</td>
             <td class="linkTd">
               <a href="../pages/button-component.html"
                 >Get Code
@@ -48,12 +66,12 @@
               >
             </td>
           </tr>
-          <tr>
+          <tr class="tableRow">
             <td>Text Field</td>
-            <td>
+            <td class="stabilityIndicatorCell">
               <span class="stabilityIndicator notStable">Non-stable</span>
             </td>
-            <td>Abdul</td>
+            <td class="contributorCell">Abdul</td>
             <td>
               <a href="./text-input-component.html"
                 >Get Code
@@ -63,10 +81,12 @@
               >
             </td>
           </tr>
-          <tr>
+          <tr class="tableRow">
             <td>Radio Button</td>
-            <td><span class="stabilityIndicator stable">Stable</span></td>
-            <td>Abdul</td>
+            <td class="stabilityIndicatorCell">
+              <span class="stabilityIndicator stable">Stable</span>
+            </td>
+            <td class="contributorCell">Abdul</td>
             <td>
               <a href="./radio-component.html"
                 >Get Code
@@ -76,10 +96,12 @@
               >
             </td>
           </tr>
-          <tr>
+          <tr class="tableRow">
             <td>Switch</td>
-            <td><span class="stabilityIndicator stable">Stable</span></td>
-            <td>Abdul</td>
+            <td class="stabilityIndicatorCell">
+              <span class="stabilityIndicator stable">Stable</span>
+            </td>
+            <td class="contributorCell">Abdul</td>
             <td>
               <a href="./switch-component.html"
                 >Get Code
@@ -89,10 +111,12 @@
               >
             </td>
           </tr>
-          <tr>
+          <tr class="tableRow">
             <td>Profile Card</td>
-            <td><span class="stabilityIndicator stable">Stable</span></td>
-            <td>Abdul</td>
+            <td class="stabilityIndicatorCell">
+              <span class="stabilityIndicator stable">Stable</span>
+            </td>
+            <td class="contributorCell">Abdul</td>
             <td>
               <a href="./profile-card-component.html"
                 >Get Code
@@ -102,10 +126,12 @@
               >
             </td>
           </tr>
-          <tr>
+          <tr class="tableRow">
             <td>Spinner</td>
-            <td><span class="stabilityIndicator stable">Stable</span></td>
-            <td>Abdul</td>
+            <td class="stabilityIndicatorCell">
+              <span class="stabilityIndicator stable">Stable</span>
+            </td>
+            <td class="contributorCell">Abdul</td>
             <td>
               <a href="../pages/spinner-component.html"
                 >Get Code
@@ -116,11 +142,69 @@
             </td>
           </tr>
         </table>
+
+        <div class="mobileList">
+          <div class="mobileTableHeader">
+            <p>Name</p>
+          </div>
+          <div class="mobileTableRow">
+            <ul>
+              <li>
+                <a href="../pages/button-component.html"
+                  >Button
+                  <span class="material-symbols-outlined attachmentIcon">
+                    attachment
+                  </span></a
+                >
+              </li>
+              <li>
+                <a href="./text-input-component.html"
+                  >Text input
+                  <span class="material-symbols-outlined attachmentIcon">
+                    attachment
+                  </span></a
+                >
+              </li>
+              <li>
+                <a href="./radio-component.html"
+                  >Radio Button
+                  <span class="material-symbols-outlined attachmentIcon">
+                    attachment
+                  </span></a
+                >
+              </li>
+              <li>
+                <a href="./switch-component.html"
+                  >Switch
+                  <span class="material-symbols-outlined attachmentIcon">
+                    attachment
+                  </span></a
+                >
+              </li>
+              <li>
+                <a href="./profile-card-component.html"
+                  >Profile Card
+                  <span class="material-symbols-outlined attachmentIcon">
+                    attachment
+                  </span></a
+                >
+              </li>
+              <li>
+                <a href="../pages/spinner-component.html"
+                  >Spinner
+                  <span class="material-symbols-outlined attachmentIcon">
+                    attachment
+                  </span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer">
       <div class="footerContainer">
-        <div>
+        <div class="footerLogoContainer">
           <a href="../index.html" class="footerLogo gradientText">Aspire UI</a>
         </div>
         <div class="sitemapContainer">

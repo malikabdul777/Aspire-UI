@@ -4,6 +4,25 @@ const contributeLinkFooter = document.querySelector(".contributeLinkFooter");
 const collaborateSection = document.querySelector(".collaborateSection");
 const contributeLinkNav = document.querySelector(".contributeLinkNav");
 const splashScreen = document.querySelector(".splashScreen");
+const hamburgerMenu = document.querySelector(".hamburgerMenu");
+const sideNavMenu = document.querySelector(".sideNavMenu");
+const contributeNavLink = document.querySelector(".contributeNavLink");
+
+// Side bar open & close for small Screens
+hamburgerMenu.addEventListener("click", () => {
+  sideNavMenu.classList.toggle("visible");
+  hamburgerMenu.classList.toggle("cross");
+});
+
+contributeNavLink.addEventListener("click", () => {
+  if (
+    sideNavMenu.classList.contains("visible") &&
+    hamburgerMenu.classList.contains("cross")
+  ) {
+    sideNavMenu.classList.remove("visible");
+    hamburgerMenu.classList.remove("cross");
+  }
+});
 
 // Smooth Scroll
 gsap.registerPlugin(ScrollTrigger);
@@ -95,17 +114,17 @@ timeline1.from(".sneakPeek", {
   },
 });
 
-timeline1.from(".collaborateSection", {
-  x: -500,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".collaborateSection",
-    // markers: true,
-    start: "top 50%",
-    end: "bottom 90%",
-    scrub: true,
-  },
-});
+// timeline1.from(".collaborateSection", {
+//   x: -500,
+//   opacity: 0,
+//   scrollTrigger: {
+//     trigger: ".collaborateSection",
+//     // markers: true,
+//     start: "top 90%",
+//     end: "bottom 90%",
+//     scrub: true,
+//   },
+// });
 
 ScrollTrigger.create({
   trigger: ".whyChooseSec",
@@ -171,7 +190,7 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".detailsTwo",
-      //   markers: true,
+      // markers: true,
       start: "top 40%",
       end: "bottom 98%",
       scrub: true,
@@ -203,11 +222,11 @@ gsap
     { backgroundColor: "#fcb" }
   );
 
-contributeLinkFooter.addEventListener("click", () => {
+contributeNavLink.addEventListener("click", () => {
   lenis.scrollTo("#collaborateSection");
 });
 
-contributeLinkNav.addEventListener("click", () => {
+contributeLinkFooter.addEventListener("click", () => {
   lenis.scrollTo("#collaborateSection");
 });
 

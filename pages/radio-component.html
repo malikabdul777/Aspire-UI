@@ -84,7 +84,7 @@
     <title>Radio Input Component</title>
   </head>
   <body>
-    <section class="sectionNoHeight">
+    <section class="sectionNoHeight header">
       <nav class="navBar">
         <a href="../index.html" class="logo gradientText">Aspire UI</a>
         <div class="navLinks">
@@ -92,9 +92,21 @@
           ><a href="./components.html" class="navLink">Components</a
           ><a href="../index.html#collaborateSection" class="navLink"
             >Contribute</a
-          ><a href="./contactUs.html" class="navLink">Contact Us</a>
+          ><a href="./contactUs.html" class="navLink">Contact us</a>
         </div>
       </nav>
+      <div class="sideNavMenu">
+        <a href="../index.html" class="navLink">Home</a
+        ><a href="./components.html" class="navLink">Components</a
+        ><a href="../index.html#collaborateSection" class="navLink"
+          >Contribute</a
+        ><a href="./contactUs.html" class="navLink">Contact us</a>
+      </div>
+      <div class="hamburgerMenu">
+        <div class="menuStick"></div>
+        <div class="menuStick"></div>
+        <div class="menuStick"></div>
+      </div>
     </section>
     <section class="sectionNoHeight componentSection">
       <h2 class="gradientText componentTitle">Radio Input</h2>
@@ -104,15 +116,30 @@
           <iframe id="preview" frameborder="0"></iframe>
         </div>
         <div class="editorContainer">
-          <div class="htmlBox codeBox">
+          <div class="codeBox">
             <div class="title">
-              <div class="titleBoxLeftContent">
-                <img src="../assets/images/html-5-logo.svg" class="htmlIcon" />
-                <span class="titleText">index.html </span>
+              <div class="tabsContainer">
+                <button class="titleBoxLeftContent htmlTitleButton activeTab">
+                  <img
+                    src="../assets/images/html-5-logo.svg"
+                    class="htmlIcon"
+                  />
+                  <span class="titleText">index.html </span>
+                </button>
+                <button class="titleBoxLeftContent cssTitleButton">
+                  <img src="../assets/images/css-3-logo.svg" class="htmlIcon" />
+                  <span class="titleText">style.css </span>
+                </button>
               </div>
               <div>
                 <div class="headerButtonContainer htmlReset">
                   <span class="material-symbols-outlined htmlResetIcon">
+                    restart_alt
+                  </span>
+                  <p>Reset</p>
+                </div>
+                <div class="headerButtonContainer cssReset hide">
+                  <span class="material-symbols-outlined cssResetIcon">
                     restart_alt
                   </span>
                   <p>Reset</p>
@@ -124,13 +151,20 @@
                 content_copy
               </span>
             </div>
+            <div class="copyBtnContainer cssCopy hide">
+              <span class="material-symbols-outlined copyIcon cssCopyIcon">
+                content_copy
+              </span>
+            </div>
+            <div class="htmlBox"></div>
+            <div class="cssBox"></div>
           </div>
-          <div class="cssBox codeBox">
+          <!-- <div class="cssBox codeBox">
             <div class="title">
-              <div class="titleBoxLeftContent">
+              <button class="titleBoxLeftContent cssTitleButton">
                 <img src="../assets/images/css-3-logo.svg" class="htmlIcon" />
                 <span class="titleText">style.css </span>
-              </div>
+              </button>
               <div>
                 <div class="headerButtonContainer cssReset">
                   <span class="material-symbols-outlined cssResetIcon">
@@ -145,7 +179,7 @@
                 content_copy
               </span>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -164,7 +198,7 @@
     </section>
     <footer class="footer">
       <div class="footerContainer">
-        <div>
+        <div class="footerLogoContainer">
           <a href="./index.html" class="footerLogo gradientText">Aspire UI</a>
         </div>
         <div class="sitemapContainer">

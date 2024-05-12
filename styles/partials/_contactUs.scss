@@ -2,25 +2,30 @@
   display: flex;
   padding-top: 2rem;
   padding-inline: 10rem;
-  height: 70vh;
+  // height: 70vh;
   align-items: flex-start;
   margin-top: 10rem;
+  width: 100%;
+  justify-content: space-between;
 }
 .contactUsLeftContent {
-  flex: 1;
+  flex: 0.7;
   margin-left: 9rem;
   margin-top: 10rem;
   h2 {
     font-size: 4rem;
-    width: 70rem;
+    // width: 70rem;
   }
   p {
     font-size: 2rem;
-    width: 60rem;
+    // width: 60rem;
   }
 }
 .formWrapper {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .inputForm {
   background-color: $darkGrey;
@@ -82,4 +87,19 @@
 
 .button:active {
   transform: scale(0.89);
+}
+@media only screen and (max-width: 1100px) {
+  .mainContactUsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  .contactUsLeftContent {
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+  .formWrapper {
+    width: 95%;
+  }
 }

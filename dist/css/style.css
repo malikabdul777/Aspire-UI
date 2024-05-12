@@ -113,7 +113,6 @@ html.lenis {
 }
 
 .navBar {
-  margin-top: 4rem;
   display: flex;
   justify-content: space-between;
 }
@@ -133,6 +132,98 @@ html.lenis {
   color: rgb(54, 209, 220);
 }
 
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.hamburgerMenu {
+  height: 5rem;
+  width: 5rem;
+  display: none;
+  transition: transform 1s ease;
+  margin-top: 2.5rem;
+}
+
+.menuStick {
+  height: 0.3rem;
+  width: 3rem;
+  background-color: #fff;
+  border-radius: 50rem;
+  transition: transform 0.5s ease;
+}
+
+.menuStick:nth-child(2) {
+  width: 2rem;
+}
+
+.menuStick:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.hamburgerMenu.cross .menuStick:nth-child(2) {
+  visibility: hidden;
+}
+
+.hamburgerMenu.cross .menuStick:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburgerMenu.cross .menuStick:nth-child(3) {
+  transform: rotate(-45deg);
+  margin-top: -1.55rem;
+}
+
+.sideNavMenu {
+  background-color: #fff;
+  height: 100vh;
+  width: 27rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 5rem;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  box-shadow: 0px 12px 38px 7px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  font-size: 2rem;
+}
+
+.sideNavMenu a {
+  margin-bottom: 3rem;
+}
+
+.sideNavMenu.visible {
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 1140px) {
+  .hamburgerMenu {
+    height: 5rem;
+    width: 5rem;
+    display: block;
+    cursor: pointer;
+  }
+  .sectionNoHeight .navLinks {
+    display: none;
+  }
+  .sectionNoHeight .navLink {
+    color: #171717;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-right: 5rem;
+    transition: all 0.2s ease;
+  }
+  .sectionNoHeight .navLink:hover {
+    color: rgb(54, 209, 220);
+  }
+}
 .footer {
   height: 45rem;
   background-color: #404040;
@@ -227,6 +318,17 @@ html.lenis {
   font-size: 2rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .section {
+    padding-top: 2rem;
+    padding-inline: 3rem;
+    height: auto;
+  }
+  .sectionNoHeight {
+    padding-top: 2rem;
+    padding-inline: 2rem;
+  }
+}
 @keyframes cursorClickAnim {
   0% {
     transform: scale(1);
@@ -327,6 +429,14 @@ html.lenis {
     transform: translateY(0);
   }
 }
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 4rem;
+  width: 100%;
+}
+
 .heroContentContainer {
   display: flex;
   justify-content: space-between;
@@ -753,6 +863,7 @@ input:checked + .slider:before {
 .collaborateSection h2 {
   font-size: 4rem;
   margin-bottom: 5rem;
+  text-align: center;
 }
 .collaborateSection h3 {
   font-size: 3rem;
@@ -770,6 +881,110 @@ input:checked + .slider:before {
   font-size: 2rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .navLinks {
+    display: none;
+  }
+  .heroContentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-inline: 1rem;
+    margin-top: 15rem;
+  }
+  .heroLeftContent {
+    width: 100%;
+  }
+  .heroImage {
+    margin-top: 10rem;
+  }
+  .componentBoxesContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .sneakPeek {
+    height: auto;
+    margin-bottom: 15rem;
+  }
+  .sneakPeek .componentBoxesOne {
+    border-radius: 0rem;
+  }
+  .sneakPeek .componentBoxesThree {
+    border-radius: 0rem;
+  }
+  .sneakPeek .componentBoxesFour {
+    border-radius: 0rem;
+  }
+  .sneakPeek .componentBoxesSix {
+    border-radius: 0rem;
+  }
+  .sneakPeek .componentBoxes {
+    border-radius: 1rem;
+  }
+  .whyChooseSec {
+    display: none;
+  }
+  .whyChooseSec .left {
+    width: 100%;
+  }
+  .whyChooseSec .right {
+    display: none;
+  }
+  .whyChooseSec .detailsWrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-inline: 5rem;
+  }
+  .whyChooseSec .details {
+    height: auto;
+    margin-block: 10rem;
+  }
+  .collaborateSection {
+    margin-bottom: 10rem;
+    height: auto;
+    margin-top: 5rem;
+  }
+  .collaborateSection h2 {
+    margin-bottom: 1rem;
+  }
+  .collaborateSection h3 {
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+    color: #808080;
+  }
+  .collaborateSection p {
+    width: 80%;
+  }
+  .footer .footerContainer {
+    display: flex;
+    align-items: flex-start;
+  }
+  .footer .footerContainer h3 {
+    font-size: 2.4rem;
+  }
+  .footer .footerLogoContainer {
+    display: none;
+  }
+  .footer .contactUsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .contactUsContainer .secondContsctIcon {
+    margin-right: 0;
+  }
+  .footer .footerDis {
+    font-size: 1.6rem;
+  }
+  .footer .footerDis .netlifyLink {
+    font-size: 1.6rem;
+  }
+}
 .componentSection {
   display: flex;
   flex-direction: column;
@@ -783,20 +998,20 @@ input:checked + .slider:before {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-bottom: 5rem;
+  flex-direction: row-reverse;
+  margin-block: 5rem;
 }
 
 .output {
-  height: 40rem;
+  height: 50rem;
   width: 60%;
   border-radius: 2rem;
-  padding: 4rem 10rem;
+  padding: 0rem 10rem;
 }
 .output h2 {
   margin-bottom: 2rem;
@@ -813,7 +1028,6 @@ input:checked + .slider:before {
 
 .editorContainer {
   display: flex;
-  margin-top: 10rem;
   max-width: 90%;
 }
 
@@ -824,18 +1038,22 @@ input:checked + .slider:before {
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
+  border-bottom: 0.3rem solid rgba(77, 87, 134, 0.3843137255);
 }
 
 .htmlBox {
   background-color: #0f111a;
-  margin-right: 10rem;
   border: none;
   border: 0.3rem solid rgba(77, 87, 134, 0.3843137255);
+  height: 50rem;
+  border-top: 0;
 }
 
 .cssBox {
   background-color: #0f111a;
   border: 0.3rem solid rgba(77, 87, 134, 0.3843137255);
+  border-top: 0;
+  height: 50rem;
 }
 
 .titleBoxContainer {
@@ -850,11 +1068,17 @@ input:checked + .slider:before {
   justify-content: space-between;
   padding-inline: 4rem;
   background-color: #22263a;
+  padding-top: 0.6rem;
 }
 
 .titleBoxLeftContent {
   display: flex;
   align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  margin-right: 2rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .titleText {
@@ -935,6 +1159,67 @@ input:checked + .slider:before {
   font-size: 2rem;
 }
 
+.activeTab {
+  background-color: #0f111a;
+  padding: 0.5rem 1.5rem;
+  height: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.tabsContainer {
+  display: flex;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .output {
+    width: 100%;
+    padding: 0rem 2rem;
+    margin-bottom: 4rem;
+  }
+  .title {
+    justify-content: flex-start;
+    padding-inline: 0.5rem;
+  }
+}
+@media only screen and (max-width: 1190px) {
+  .container {
+    flex-direction: column;
+  }
+  .output {
+    width: 80rem;
+    padding: 0rem 2rem;
+    margin-bottom: 4rem;
+  }
+  .title {
+    justify-content: space-between;
+    padding-right: 3rem;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .output {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .headerButtonContainer p {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .title {
+    justify-content: space-between;
+    padding-right: 3rem;
+  }
+}
 .componentsPageHeader {
   padding-top: 2rem;
   padding-inline: 10rem;
@@ -1013,31 +1298,95 @@ td a {
   background-color: #f76564;
 }
 
+.mobileList {
+  background-color: #1e1e1e;
+  font-size: 2rem;
+  margin-top: 5rem;
+  width: 120%;
+  padding: 3rem 5rem;
+  border-radius: 5rem;
+  padding-bottom: 6rem;
+  border: 0.1rem solid rgba(77, 87, 134, 0.3843137255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+.mobileTableHeader {
+  background-color: #999999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border-radius: 2rem;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+.mobileTableRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+}
+
+.mobileTableRow ul {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 95%;
+  list-style: none;
+  flex-direction: column;
+}
+.mobileTableRow ul li {
+  height: 30px;
+  margin-top: 40px;
+}
+.mobileTableRow ul a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 830px) {
+  .table {
+    display: none;
+  }
+  .mobileList {
+    display: block;
+  }
+}
 .mainContactUsWrapper {
   display: flex;
   padding-top: 2rem;
   padding-inline: 10rem;
-  height: 70vh;
   align-items: flex-start;
   margin-top: 10rem;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .contactUsLeftContent {
-  flex: 1;
+  flex: 0.7;
   margin-left: 9rem;
   margin-top: 10rem;
 }
 .contactUsLeftContent h2 {
   font-size: 4rem;
-  width: 70rem;
 }
 .contactUsLeftContent p {
   font-size: 2rem;
-  width: 60rem;
 }
 
 .formWrapper {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .inputForm {
@@ -1102,4 +1451,20 @@ td a {
 
 .button:active {
   transform: scale(0.89);
+}
+
+@media only screen and (max-width: 1100px) {
+  .mainContactUsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  .contactUsLeftContent {
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+  .formWrapper {
+    width: 95%;
+  }
 }

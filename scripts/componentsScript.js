@@ -1,6 +1,5 @@
-"use Strict";
+"use strict";
 
-const contactUsForm = document.querySelector(".contactUsForm");
 const hamburgerMenu = document.querySelector(".hamburgerMenu");
 const sideNavMenu = document.querySelector(".sideNavMenu");
 
@@ -8,10 +7,4 @@ const sideNavMenu = document.querySelector(".sideNavMenu");
 hamburgerMenu.addEventListener("click", () => {
   sideNavMenu.classList.toggle("visible");
   hamburgerMenu.classList.toggle("cross");
-});
-
-contactUsForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  alert("Your Query is submitted!");
 });

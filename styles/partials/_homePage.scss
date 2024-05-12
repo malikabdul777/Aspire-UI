@@ -76,7 +76,13 @@
 .heroSection {
   // height: 90vh;
 }
-
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 4rem;
+  width: 100%;
+}
 .heroContentContainer {
   display: flex;
   justify-content: space-between;
@@ -488,6 +494,7 @@ input:checked + .slider:before {
   h2 {
     font-size: 4rem;
     margin-bottom: 5rem;
+    text-align: center;
   }
   h3 {
     font-size: 3rem;
@@ -504,4 +511,117 @@ input:checked + .slider:before {
   color: $textColor;
   text-decoration: none;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  // .navBar {
+  //   margin-bottom: 4rem;
+  // }
+  .navLinks {
+    display: none;
+    // visibility: hidden;
+  }
+  .heroContentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-inline: 1rem;
+    margin-top: 15rem;
+  }
+  .heroLeftContent {
+    width: 100%;
+  }
+  .heroImage {
+    margin-top: 10rem;
+  }
+  .componentBoxesContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .sneakPeek {
+    height: auto;
+    margin-bottom: 15rem;
+
+    .componentBoxesOne {
+      border-radius: 0rem;
+    }
+    .componentBoxesThree {
+      border-radius: 0rem;
+    }
+    .componentBoxesFour {
+      border-radius: 0rem;
+    }
+    .componentBoxesSix {
+      border-radius: 0rem;
+    }
+    .componentBoxes {
+      border-radius: 1rem;
+    }
+  }
+  .whyChooseSec {
+    display: none;
+    .left {
+      width: 100%;
+    }
+    .right {
+      display: none;
+    }
+    .detailsWrapper {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-inline: 5rem;
+    }
+    .details {
+      height: auto;
+      margin-block: 10rem;
+    }
+  }
+  .collaborateSection {
+    margin-bottom: 10rem;
+    height: auto;
+    margin-top: 5rem;
+    h2 {
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+      width: 80%;
+      color: $lightGrey;
+    }
+    p {
+      width: 80%;
+    }
+  }
+  .footer {
+    .footerContainer {
+      display: flex;
+      align-items: flex-start;
+
+      h3 {
+        font-size: 2.4rem;
+      }
+    }
+    .footerLogoContainer {
+      display: none;
+    }
+    .contactUsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .secondContsctIcon {
+        margin-right: 0;
+      }
+    }
+    .footerDis {
+      font-size: 1.6rem;
+      .netlifyLink {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }

@@ -11,6 +11,18 @@ const cssCopyIcon = document.querySelector(".cssCopyIcon");
 const htmlCopyIcon = document.querySelector(".htmlCopyIcon");
 const htmlResetIcon = document.querySelector(".htmlResetIcon");
 const cssResetIcon = document.querySelector(".cssResetIcon");
+const htmlTitleButton = document.querySelector(".htmlTitleButton");
+const cssTitleButton = document.querySelector(".cssTitleButton");
+const headerButtonContainer = document.querySelector(".headerButtonContainer");
+const codeBox = document.querySelector(".codeBox");
+const hamburgerMenu = document.querySelector(".hamburgerMenu");
+const sideNavMenu = document.querySelector(".sideNavMenu");
+
+// Side bar open & close for small Screens
+hamburgerMenu.addEventListener("click", () => {
+  sideNavMenu.classList.toggle("visible");
+  hamburgerMenu.classList.toggle("cross");
+});
 
 //Code Mirror Initialization
 const htmlCodeInstance = CodeMirror(htmlInput, {
@@ -105,4 +117,37 @@ cssCopyBtn.addEventListener("click", () => {
   setTimeout(() => {
     cssCopyIcon.textContent = " content_copy";
   }, 1500);
+});
+
+// Tabs switch Logic
+htmlTitleButton.addEventListener("click", () => {
+  if (!htmlTitleButton.classList.contains("activeTab")) {
+    htmlTitleButton.classList.add("activeTab");
+    cssTitleButton.classList.remove("activeTab");
+
+    cssResetBtn.classList.add("hide");
+    htmlResetBtn.classList.remove("hide");
+
+    htmlCopyBtn.classList.remove("hide");
+    cssCopyBtn.classList.add("hide");
+
+    htmlInput.classList.remove("hide");
+    cssInput.classList.add("hide");
+  }
+});
+
+cssTitleButton.addEventListener("click", () => {
+  if (!cssTitleButton.classList.contains("activeTab")) {
+    htmlTitleButton.classList.remove("activeTab");
+    cssTitleButton.classList.add("activeTab");
+
+    cssResetBtn.classList.remove("hide");
+    htmlResetBtn.classList.add("hide");
+
+    htmlCopyBtn.classList.add("hide");
+    cssCopyBtn.classList.remove("hide");
+
+    htmlInput.classList.add("hide");
+    cssInput.classList.remove("hide");
+  }
 });
